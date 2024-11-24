@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/total_screen_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Screen Time: 0h 0m"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/active_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Active Time: 0h 0m"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/total_screen_time"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/idle_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Idle Time: 0h 0m"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/active_time"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/next_break"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next Break in: 0m"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/idle_time"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <ProgressBar
+        android:id="@+id/break_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/next_break"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/pause_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pause"
+        app:layout_constraintTop_toBottomOf="@id/break_progress"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        app:layout_constraintTop_toBottomOf="@id/break_progress"
+        app:layout_constraintStart_toEndOf="@id/pause_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

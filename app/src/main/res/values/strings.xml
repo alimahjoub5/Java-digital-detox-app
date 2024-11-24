@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Digital Detox</string>
+<string-array name="break_intervals">
+    <item>10 minutes</item>
+    <item>20 minutes</item>
+    <item>30 minutes</item>
+    <item>45 minutes</item>
+</string-array>
+</resources>
+
